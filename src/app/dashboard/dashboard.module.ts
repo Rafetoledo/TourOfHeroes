@@ -14,7 +14,7 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
 
   ],
   imports: [
-    CommonModule, MaterialModule, RouterModule, FlexLayoutModule, DashboardRoutingModule
+    CommonModule, MaterialModule, RouterModule, FlexLayoutModule, DashboardRoutingModule,
 
   ]
 })

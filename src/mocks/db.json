@@ -1,0 +1,15 @@
+
+{
+  "heroes":[
+    {"id": 1, "name": "Wolverine"},
+    {"id": 2, "name": "Homem-Aranha"},
+    {"id": 3, "name": "Magneto"},
+    {"id": 4, "name": "The Flash"},
+    {"id": 5, "name": "Tempestade"},
+    {"id": 6, "name": "Venom"},
+    {"id": 7, "name": "Hulk"},
+    {"id": 8, "name": "Batman"},
+    {"id": 9, "name": "Superman"},
+    {"id": 10, "name": "Laterna Verde"}
+  ]
+}

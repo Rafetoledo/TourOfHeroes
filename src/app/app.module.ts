@@ -5,26 +5,20 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
-import { CommonModule } from '@angular/common';
-import { DashboardModule } from './dashboard/dashboard.module';
-import { HeroesModule } from './heroes/heroes.module';
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
-
     // Angular
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
+    HttpClientModule,
+
+    //app
     AppRoutingModule,
     CoreModule,
-    CommonModule,
-    DashboardModule, HeroesModule,
-
   ],
   providers: [],
   bootstrap: [AppComponent]

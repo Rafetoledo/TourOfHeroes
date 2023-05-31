@@ -1,26 +1,38 @@
-import { Injectable } from "@angular/core";
+import { Injectable, Pipe } from "@angular/core";
 import { Hero } from "../models/hero.model";
 import { HEROES } from "./mock-hero";
-import { Observable, of } from "rxjs";
+import { Observable, finalize, of, tap } from "rxjs";
 import { MessageService } from "./message.service";
+import { HttpClient } from "@angular/common/http";
+import { LoadingService } from "./loading.service";
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class HeroService{
+  private heroesUrl = 'api/heroes';
 
-  constructor(private messageService: MessageService){}
+  constructor(
+    private http: HttpClient,
+    private messageService: MessageService,
+    ){}
 
   getHeroes(): Observable<Hero[]> {
-    const heroes = of(HEROES)
-    this.messageService.add('HeroService: Fetched heroes');
-    return heroes;
+    return this.http.
+    get<Hero[]>(this.heroesUrl).
+    pipe(tap((heroes) => this.log(`fetched ${heroes.length} hero(es)`)));
   }
 
-  getHero(id: number): Observable<Hero> {
-    const hero = HEROES.find(hero => hero.id === id)!;
-    this.messageService.add(`HeroService: Fetched hero id=${{id}}`);
-    return of (hero);
+  getHero(id: number):Observable<Hero> {
+    return this.http.
+    get<Hero>(`${this.heroesUrl}/${id}`).
+    pipe(
+      tap((hero) => this.log(`fetched hero id=${id} and name=${hero.name}`))
+    );
+  }
+
+  private log (message: string): void{
+    this.messageService.add(`HeroService: ${message}`)
   }
 }
