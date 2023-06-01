@@ -1,15 +1,64 @@
-
 {
-  "heroes":[
-    {"id": 1, "name": "Wolverine"},
-    {"id": 2, "name": "Homem-Aranha"},
-    {"id": 3, "name": "Magneto"},
-    {"id": 4, "name": "The Flash"},
-    {"id": 5, "name": "Tempestade"},
-    {"id": 6, "name": "Venom"},
-    {"id": 7, "name": "Hulk"},
-    {"id": 8, "name": "Batman"},
-    {"id": 9, "name": "Superman"},
-    {"id": 10, "name": "Laterna Verde"}
+  "heroes": [
+    {
+      "id": 1,
+      "name": "Wolverine 2"
+    },
+    {
+      "id": 2,
+      "name": "Homem-Aranha578"
+    },
+    {
+      "id": 3,
+      "name": "Magneto589"
+    },
+    {
+      "id": 4,
+      "name": "The Flash7"
+    },
+    {
+      "id": 5,
+      "name": "Tempestade"
+    },
+    {
+      "id": 6,
+      "name": "Venom"
+    },
+    {
+      "id": 7,
+      "name": "Hulk"
+    },
+    {
+      "id": 8,
+      "name": "Batman"
+    },
+    {
+      "id": 9,
+      "name": "Superman"
+    },
+    {
+      "id": 10,
+      "name": "Laterna Verde"
+    },
+    {
+      "name": "Casa",
+      "id": 11
+    },
+    {
+      "name": "Shazam",
+      "id": 12
+    },
+    {
+      "name": "Robin",
+      "id": 13
+    },
+    {
+      "name": "Gaviao",
+      "id": 14
+    },
+    {
+      "name": "wed",
+      "id": 15
+    }
   ]
 }

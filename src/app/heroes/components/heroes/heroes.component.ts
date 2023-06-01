@@ -21,7 +21,7 @@ ngOnInit(): void {
 }
 
 getHeroes() {
-  this.heroService.getHeroes().subscribe(heroes => this.heroes = heroes);
+  this.heroService.getAll().subscribe(heroes => this.heroes = heroes);
 }
 
 
