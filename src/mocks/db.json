@@ -2,19 +2,19 @@
   "heroes": [
     {
       "id": 1,
-      "name": "Wolverine 2"
+      "name": "Wolverine "
     },
     {
       "id": 2,
-      "name": "Homem-Aranha578"
+      "name": "Homem-Aranha"
     },
     {
       "id": 3,
-      "name": "Magneto589"
+      "name": "Magneto"
     },
     {
       "id": 4,
-      "name": "The Flash7"
+      "name": "The Flash"
     },
     {
       "id": 5,
@@ -41,10 +41,6 @@
       "name": "Laterna Verde"
     },
     {
-      "name": "Casa",
-      "id": 11
-    },
-    {
       "name": "Shazam",
       "id": 12
     },
@@ -53,11 +49,11 @@
       "id": 13
     },
     {
-      "name": "Gaviao",
+      "name": "Gaviao Arqueiro",
       "id": 14
     },
     {
-      "name": "wed",
+      "name": "Homem de ferro",
       "id": 15
     }
   ]

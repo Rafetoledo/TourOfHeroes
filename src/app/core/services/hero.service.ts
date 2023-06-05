@@ -26,7 +26,7 @@ export class HeroService{
 
   getHero(id: number):Observable<Hero> {
     return this.http.
-    get<Hero>(`${this.heroesUrl}/${id}`).
+    get<Hero>(this.getUrl(id)).
     pipe(
       tap((hero) => this.log(`fetched${this.descAtttibutes(hero)}`))
     );
@@ -37,7 +37,7 @@ export class HeroService{
   }
 
   updateHero(hero: Hero): Observable<Hero> {
-    return this.http.put<Hero>(`${this.heroesUrl}/${hero.id}`,hero)
+    return this.http.put<Hero>(this.getUrl(hero.id),hero)
     .pipe(
       tap((hero) =>
         this.log(`update ${this.descAtttibutes(hero)}`)
@@ -54,7 +54,36 @@ export class HeroService{
     );
   }
 
+  deleteHero(hero: Hero): Observable<Hero> {
+     const deletedHero = hero;
+    return this.http.delete<Hero>(this.getUrl(hero.id))
+    .pipe(tap((hero) => this.log(`Deleted ${this.descAtttibutes(deletedHero)}`)))
+  }
+
+
+  searchHero(term: String): Observable<Hero[]> {
+    if(!term.trim()){
+      return of ([]);
+    }
+
+    return this.http
+      .get<Hero[]>(`${this.heroesUrl}?name=${term}`)
+      .pipe(
+        tap((heroes) =>
+          heroes.length
+            ? this.log(`found ${heroes.length} hero(es) matching "${term}"`)
+            : this.log(`no heroes matching "${term}"`)
+        )
+      );
+  }
+
   private descAtttibutes(hero: Hero): string {
+    console.log(hero);
     return `hero id=${hero.id} and name=${hero.name}`;
+
+  }
+
+  private getUrl(id: number): string {
+    return `${this.heroesUrl}/${id}`;
   }
 }

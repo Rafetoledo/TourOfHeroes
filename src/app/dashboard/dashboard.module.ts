@@ -5,6 +5,7 @@ import { MaterialModule } from '../material/material.module';
 import { RouterModule } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { DashboardRoutingModule } from './dashboard-routing.module';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -14,7 +15,7 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
 
   ],
   imports: [
-    CommonModule, MaterialModule, RouterModule, FlexLayoutModule, DashboardRoutingModule,
+    CommonModule, MaterialModule, RouterModule, FlexLayoutModule, DashboardRoutingModule, SharedModule
 
   ]
 })
